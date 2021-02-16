@@ -43,13 +43,13 @@ def main():
     uf = UnionFind(N)
     
     while True:
-        print('\n-------------OPERATIONS-------------\n1.Union\n2.Check Connection\n3.Display ID Array\n4.Quit')
+        print('\n-------------OPERATIONS-------------\n1.Union\n2.Check Connection\n3.Display ID Array\n4.Gte number of connected components\n5.Quit')
 
         try:
-            choice = int(input('\nEnter choice (1/2/3/4): '))
+            choice = int(input('\nEnter choice (1/2/3/4/5): '))
         except:
             print('Invalid choice entered! Try again')
-            choice = int(input('\nEnter choice (1/2/3/4): '))
+            choice = int(input('\nEnter choice (1/2/3/4/5): '))
 
         if choice == 1:
             print('\n---------------UNION---------------')
@@ -82,22 +82,15 @@ def main():
             print('Current ID Array: ', uf.getIdArray())
 
         elif choice == 4:
+            print('Number of connected components:',uf.count())
+            
+        elif choice == 5:
             print('\n\nAdios!')
             break
+
         else:
             print('Invalid choice!')
 
 
-
-
-
 if __name__ == "__main__":
     main()
-        
-
-    
-
-    
-    
-
-    
