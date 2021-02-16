@@ -1,4 +1,4 @@
-<h2>Union Find Algorithms<h2>
+<b>>Union Find Algorithms</b>
 <p>
 Here are few implementations of the union find algorithms:
 <ol>
