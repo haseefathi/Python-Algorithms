@@ -1,14 +1,19 @@
-class UnionFind: # quick-union implementation
+class UnionFind:  # weighted quick-union with path compression implementation
     count = 0
     ids = list()
+    size = list()
 
     def __init__(self,N):
         self.count = N
         for i in range(0,N):
             self.ids.append(i)
+            self.size.append(1)
 
     def getIdArray(self):
         return self.ids
+
+    def getSizeArray(self):
+        return self.size
 
     def connected(self,p,q):
         return self.find(p) == self.find(q)
@@ -16,9 +21,10 @@ class UnionFind: # quick-union implementation
     def getCount(self):
         return self.count
 
-    def find(self, p):
+    def find(self, p):  
         # keep going higher in the tree till you reach root node
         while(p!=self.ids[p]): 
+            self.ids[p] = self.ids[self.ids[p]] # path compression line
             p = self.ids[p]
 
         # returns the root node
@@ -35,10 +41,15 @@ class UnionFind: # quick-union implementation
 
         # not connected...so change the values in the ids array
         # change the values of the p component to that of the q component
-        self.ids[pRoot] = qRoot
+        if self.size[pRoot] < self.size[qRoot]:
+            self.ids[pRoot] = qRoot
+            self.size[qRoot] += self.size[pRoot]
+        else:
+            self.ids[qRoot] = pRoot
+            self.size[pRoot] += self.size[qRoot]
+
 
         self.count -= 1
-
 
 
 def main():
@@ -53,13 +64,13 @@ def main():
     uf = UnionFind(N)
     
     while True:
-        print('\n-------------OPERATIONS-------------\n1.Union\n2.Check Connection\n3.Display ID Array\n4.Get number of connected components\n5.Quit')
+        print('\n-------------OPERATIONS-------------\n1.Union\n2.Check Connection\n3.Display ID Array\n4.Display Size Array\n5.Get number of connected components\n6.Quit')
 
         try:
-            choice = int(input('\nEnter choice (1/2/3/4/5): '))
+            choice = int(input('\nEnter choice (1/2/3/4/5/6): '))
         except:
             print('Invalid choice entered! Try again')
-            choice = int(input('\nEnter choice (1/2/3/4/5): '))
+            choice = int(input('\nEnter choice (1/2/3/4/5/6): '))
 
         if choice == 1:
             print('\n---------------UNION---------------')
@@ -90,12 +101,15 @@ def main():
 
         elif choice == 3:
             print('Current ID Array: ', uf.getIdArray())
-
+            
         elif choice == 4:
+            print('Current Size Array: ', uf.getSizeArray())
+
+        elif choice == 5:
             count = uf.getCount()
             print('Number of connected components: ',count)
             
-        elif choice == 5:
+        elif choice == 6:
             print('\n\nAdios!')
             break
 

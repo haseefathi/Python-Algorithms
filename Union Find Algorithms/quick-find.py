@@ -1,4 +1,4 @@
-class UnionFind:
+class UnionFind:   # quick-find implementation
     count = 0
     ids = list()
 
