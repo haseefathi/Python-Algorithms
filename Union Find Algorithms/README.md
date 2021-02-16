@@ -1,5 +1,5 @@
 <h2>Union Find Algorithms<h2>
-
+<p>
 Here are few implementations of the union find algorithms:
 <ol>
   <li>
@@ -24,3 +24,4 @@ This implementation works better since it avoids creating trees of large depth. 
 </li>
                 <hr>
 </ol>
+</p>
