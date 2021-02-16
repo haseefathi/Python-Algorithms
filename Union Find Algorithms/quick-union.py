@@ -17,21 +17,26 @@ class UnionFind:
         return self.count
 
     def find(self, p):
-        return self.ids[p]
+        # keep going higher in the tree till you reach root node
+        while(p!=self.ids[p]): 
+            p = self.ids[p]
+
+        # returns the root node
+        return p
+
 
     def union(self, p, q):
-        pid = self.find(p)
-        qid = self.find(q)
+        pRoot = self.find(p)
+        qRoot = self.find(q)
 
         # already joined to each other...so do nothing
-        if pid == qid:
+        if pRoot == qRoot:
             return 
 
         # not connected...so change the values in the ids array
         # change the values of the p component to that of the q component
-        for i in range(0, len(self.ids)):
-            if self.ids[i] == pid:
-                self.ids[i] = qid
+        self.ids[pRoot] = qRoot
+
         self.count -= 1
 
 
@@ -87,7 +92,8 @@ def main():
             print('Current ID Array: ', uf.getIdArray())
 
         elif choice == 4:
-            print('Number of connected components:',uf.getCount())
+            count = uf.getCount()
+            print('Number of connected components: ',count)
             
         elif choice == 5:
             print('\n\nAdios!')
