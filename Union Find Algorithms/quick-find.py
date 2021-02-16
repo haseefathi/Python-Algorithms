@@ -22,8 +22,13 @@ class UnionFind:
     def union(self, p, q):
         pid = self.find(p)
         qid = self.find(q)
+
+        # already joined to each other...so do nothing
         if pid == qid:
             return 
+
+        # not connected...so change the values in the ids array
+        # change the values of the p component to that of the q component
         for i in range(0, len(self.ids)):
             if self.ids[i] == pid:
                 self.ids[i] = qid
