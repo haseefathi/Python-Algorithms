@@ -25,3 +25,40 @@ This implementation works better since it avoids creating trees of large depth. 
                 <hr>
 </ol>
 </p>
+
+<p>
+<b> SUMMARY OF ALL UNION-FIND ALGOS </b>
+<table>
+  <tr>
+    <th>Algorithm</th>
+    <th>Constructor</th>
+    <th>Union</th>
+    <th>Find</th>
+  </tr>
+  <tr>
+    <td>Quick Find</td>
+    <td>N</td>
+    <td>N</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Quick Union</td>
+    <td>N</td>
+    <td>tree height</td>
+    <td>tree height</td>
+  </tr>
+  <tr>
+    <td>Weighted Quick Union</td>
+    <td>N</td>
+    <td>lg N</td>
+    <td>lg N</td>
+  </tr>
+  <tr>
+    <td>Weighted Quick Union with Path Compression</td>
+    <td>N</td>
+    <td>almost 1</td>
+    <td>almost 1</td>
+  </tr>
+ </table>
+ 
+ </p>
