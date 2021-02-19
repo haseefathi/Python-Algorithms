@@ -7,8 +7,15 @@ In this algorithm, you repeatedly divide the array by half in every interation. 
 
 <table>
     <tr>
-        <td>
+        <th>
             Case 1: Key is found
+        </th>
+        <th>
+            Case 2: Key is not found
+        </th>
+    </tr>
+    <tr>
+        <td>
             <p align = "center">
             <img src="https://github.com/haseefathi/Python-Algorithms/blob/main/Search%20Algorithms/images/binarysearch-1.png" width="350" height="200" />
             </p>
@@ -22,7 +29,3 @@ In this algorithm, you repeatedly divide the array by half in every interation. 
     </tr>
 </table>
 
-Case 2: Key is not found
-<p align = "center">
-<img src="https://github.com/haseefathi/Python-Algorithms/blob/main/Search%20Algorithms/images/binarysearch-2.png" width="350" height="200" />
-</p>
