@@ -17,12 +17,12 @@ In this algorithm, you repeatedly divide the array by half in every interation. 
     <tr>
         <td>
             <p align = "center">
-            <img src="https://github.com/haseefathi/Python-Algorithms/blob/main/Search%20Algorithms/images/binarysearch-1.png" width="350" height="200" />
+            <img src="https://github.com/haseefathi/Python-Algorithms/blob/main/SearchAlgorithms/images/binarysearch-1.png" width="350" height="200" />
             </p>
         </td>
         <td>
             <p align = "center">
-            <img src="https://github.com/haseefathi/Python-Algorithms/blob/main/Search%20Algorithms/images/binarysearch-2.png" width="350" height="200" />
+            <img src="https://github.com/haseefathi/Python-Algorithms/blob/main/SearchAlgorithms/images/binarysearch-2.png" width="350" height="200" />
             </p>
         </td>
     </tr>
