@@ -51,4 +51,11 @@ In this algorithm, you sort the array by virtually splitting the array into sort
     <img src="https://github.com/haseefathi/Python-Algorithms/blob/main/Sorting%20Algorithms/images/insertion-sort.png" width="450" height="200" />
 </p>
 
+## Shell Sort
+### File name: shell-sort.py
+Shell sort is a variation of Insertion sort in which you first h-sort the array for some large value of h and then keep reducing the value of h till it becomes 1. In the given code, the h value starts from the largest value of h less than N/3 from the sequence 3k+1. 
+### Input and Output Samples
+<p align = "center">
+    <img src="https://github.com/haseefathi/Python-Algorithms/blob/main/Sorting%20Algorithms/images/shell-sort.png" width="450" height="200" />
+</p>
 
