@@ -63,7 +63,7 @@ Shell sort is a variation of Insertion sort in which you first h-sort the array 
 
 ## Merge Sort
 ### File name: merge-sort.py
-Merge sort is a Divide and Conquer algorithm which sorts an array on N elements in O(NlogN) in best, worst and average case. It sorts the array by dividing the array into two halves, sorts each half by calling itself and then merges the two halves. It takes additional space proportional to the size of the array 
+Merge sort is a Divide and Conquer algorithm which sorts an array on N elements in O(NlogN) in best, worst and average case. It sorts the array by dividing the array into two halves, sorts each half by calling itself and then merges the two halves. It takes additional space proportional to the size of the array.
 ### Input and Output Samples
 <p align = "center">
     <img src="https://github.com/haseefathi/Python-Algorithms/blob/main/Sorting%20Algorithms/images/merge-sort.png" width="450" height="200" />
