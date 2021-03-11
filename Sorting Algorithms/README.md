@@ -51,6 +51,7 @@ In this algorithm, you sort the array by virtually splitting the array into sort
     <img src="https://github.com/haseefathi/Python-Algorithms/blob/main/Sorting%20Algorithms/images/insertion-sort.png" width="450" height="200" />
 </p>
 
+
 ## Shell Sort
 ### File name: shell-sort.py
 Shell sort is a variation of Insertion sort in which you first h-sort the array for some large value of h and then keep reducing the value of h till it becomes 1. In the given code, the h value starts from the largest value of h less than N/3 from the sequence 3k+1. 
@@ -59,3 +60,11 @@ Shell sort is a variation of Insertion sort in which you first h-sort the array 
     <img src="https://github.com/haseefathi/Python-Algorithms/blob/main/Sorting%20Algorithms/images/shell-sort.png" width="450" height="200" />
 </p>
 
+
+## Merge Sort
+### File name: merge-sort.py
+Merge sort is a Divide and Conquer algorithm which sorts an array on N elements in O(NlogN) in best, worst and average case. It sorts the array by dividing the array into two halves, sorts each half by calling itself and then merges the two halves. It takes additional space proportional to the size of the array 
+### Input and Output Samples
+<p align = "center">
+    <img src="https://github.com/haseefathi/Python-Algorithms/blob/main/Sorting%20Algorithms/images/merge-sort.png" width="450" height="200" />
+</p>
