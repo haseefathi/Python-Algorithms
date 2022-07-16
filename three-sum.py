@@ -7,6 +7,8 @@ def countTriples(array):
 
     ar = Array(array)
 
+    # this is a comment
+
     for i in range(0,n):
         for j in range(i+1, n):
             if(ar.binarySearch(-array[i]-array[j]) > j):
