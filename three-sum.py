@@ -7,7 +7,7 @@ def countTriples(array):
 
     ar = Array(array)
 
-    # this is a comment
+    # this is a comment 2
 
     for i in range(0,n):
         for j in range(i+1, n):
